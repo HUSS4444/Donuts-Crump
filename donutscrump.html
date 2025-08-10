@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Donuts Crump</title>
+    <link rel="stylesheet" href="./style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+</head>
+
+
+<body>
+
+
+
+    <div class="container">
+    
+
+        <div class="left-section">
+            <div class="bar">
+                <div class="icons">
+                    <i class="fas fa-user"></i>
+                    <i class="fas fa-search" id="search-icon"></i>
+                </div>
+                <input type="text" id="search-bar" placeholder="Search..." />
+                <div class="signup">
+                    <button class="signup-btn">Sign Up</button>
+                </div>
+            </div>
+
+            <div class="logo">
+                <img src=".\images\logo.png" alt="Donuts Crump Logo" width="1000">
+            </div>
+
+            <div class="slogan">
+                <h1>Donuts Crump</h1>
+                <p>Order online today and get your favourite, fresh donuts crump ® doughnuts delivered to your door</p>
+            </div>
+
+            <div class="Find">
+                <p>Find us:</p>
+                <div class="icons">
+                    <img src="./images/whatsapp.jpg" alt="WhatsApp">
+                    <img src="./images/face.jpg" alt="Facebook">
+                    <img src="./images/insta.jpg" alt="Instagram" class="insta">
+                </div>
+            </div>
+        </div>
+
+        <div class="right-section">
+            <div class="choise">
+                <button class="menu-btn">Menu</button>
+                <button class="location-btn">Location</button>
+                <button class="about-btn">About Us</button>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const searchIcon = document.getElementById('search-icon');
+            const searchBar = document.getElementById('search-bar');
+
+            searchIcon.addEventListener('click', () => {
+                searchBar.classList.toggle('active');
+
+                if (searchBar.classList.contains('active')) {
+                    searchBar.focus();
+                } else {
+                    searchBar.value = '';
+                }
+            });
+        });
+    </script>
+</body>
+
+
+</html>
